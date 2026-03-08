@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 · no disponible</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      min-height: 100vh;
+      background: #e6ecf5;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      background-image: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.3) 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(180,200,230,0.2) 0%, transparent 40%),
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 2px, rgba(0,0,0,0.01) 2px, rgba(0,0,0,0.01) 4px);
+      position: relative;
+      overflow-x: hidden;
+    }
+    .card {
+      max-width: 700px;
+      width: 100%;
+      background: #e6ecf5;
+      padding: 3.5rem 3rem;
+      border-radius: 60px;
+      box-shadow: -18px -18px 30px rgba(255,255,255,0.7), 18px 18px 30px rgba(163,177,198,0.5),
+        inset -2px -2px 8px rgba(0,0,0,0.02), inset 2px 2px 10px rgba(255,255,255,0.8),
+        0 15px 25px -8px rgba(120,130,150,0.4);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-top-color: rgba(255,255,255,0.7);
+      border-left-color: rgba(255,255,255,0.6);
+      border-right-color: rgba(200,210,230,0.2);
+      border-bottom-color: rgba(160,170,190,0.2);
+      backdrop-filter: blur(2px);
+      color: #2f3a4b;
+      text-align: center;
+      position: relative;
+      z-index: 5;
+    }
+    .card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: -22px -22px 35px rgba(255,255,255,0.8), 22px 22px 35px rgba(143,159,180,0.6),
+        inset -1px -1px 5px rgba(0,0,0,0.02), inset 1px 1px 12px rgba(255,255,255,0.9),
+        0 22px 30px -10px rgba(80,90,110,0.5);
+      border-color: rgba(255,255,255,0.45) rgba(255,255,255,0.3) rgba(200,210,235,0.25) rgba(200,210,235,0.25);
+    }
+
+    /* error word with glitch and movement */
+    .glitch-word {
+      font-size: 2.2rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      color: #5a6c82;
+      opacity: 0.7;
+      margin-bottom: 0.2rem;
+      text-shadow: 1px 1px 2px white, -1px -1px 1px rgba(0,0,0,0.05);
+      animation: moveGlitch 3s infinite ease-in-out;
+      display: inline-block;
+      position: relative;
+    }
+    @keyframes moveGlitch {
+      0%, 100% { transform: skew(0deg, 0deg) translateX(0); opacity: 0.7; text-shadow: 2px 2px 3px white, -1px -1px 2px rgba(0,0,0,0.1); }
+      10% { transform: skew(2deg, 1deg) translateX(2px); opacity: 0.9; text-shadow: -3px 0 cyan, 3px 0 red; }
+      20% { transform: skew(-2deg, -1deg) translateX(-2px); opacity: 0.8; text-shadow: 3px 0 cyan, -3px 0 red; }
+      30% { transform: skew(1deg, -1deg) translateX(1px); opacity: 1; text-shadow: -2px 0 lime, 2px 0 blue; }
+      40% { transform: skew(0deg, 0deg) translateX(0); opacity: 0.7; text-shadow: 1px 1px 2px white, -1px -1px 1px rgba(0,0,0,0.05); }
+    }
+
+    /* 404 animated gradient, slight deformation */
+    .error-code {
+      font-size: clamp(6rem, 20vw, 11rem);
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(145deg, #3a465b, #1f2a3a);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: floatDeform 5s infinite, gradientShift 8s infinite alternate;
+      filter: drop-shadow(0 4px 4px rgba(0,0,0,0.02));
+      display: inline-block;
+      transform-origin: center;
+    }
+    @keyframes floatDeform {
+      0%, 100% { transform: perspective(500px) rotateX(0deg) rotateY(0deg) scale(1); }
+      25% { transform: perspective(500px) rotateX(2deg) rotateY(3deg) scale(1.02); }
+      50% { transform: perspective(500px) rotateX(-1deg) rotateY(-2deg) scale(0.99); }
+      75% { transform: perspective(500px) rotateX(3deg) rotateY(-1deg) scale(1.01); }
+    }
+    @keyframes gradientShift {
+      0% { background: linear-gradient(145deg, #3a465b, #1f2a3a); -webkit-background-clip: text; background-clip: text; }
+      25% { background: linear-gradient(145deg, #5f4b8b, #2a3f5e); -webkit-background-clip: text; background-clip: text; }
+      50% { background: linear-gradient(145deg, #8b4b6b, #1f4a5a); -webkit-background-clip: text; background-clip: text; }
+      75% { background: linear-gradient(145deg, #3f6b8b, #4a2f5a); -webkit-background-clip: text; background-clip: text; }
+      100% { background: linear-gradient(145deg, #3a465b, #1f2a3a); -webkit-background-clip: text; background-clip: text; }
+    }
+
+    /* message with glitch and typewriter simulation (will be swapped via JS) */
+    .message {
+      font-size: clamp(1.3rem, 5vw, 2rem);
+      font-weight: 400;
+      color: #2b3b4f;
+      background: rgba(230,236,245,0.6);
+      display: inline-block;
+      padding: 0.5rem 2rem 0.7rem;
+      border-radius: 120px;
+      margin: 1.2rem 0 1.8rem;
+      box-shadow: inset -3px -3px 6px rgba(255,255,255,0.8), inset 3px 3px 6px rgba(163,177,198,0.4), 0 5px 12px rgba(120,130,150,0.15);
+      border: 1px solid rgba(255,255,255,0.4);
+      border-bottom-color: rgba(180,190,210,0.3);
+      backdrop-filter: blur(2px);
+      line-height: 1.4;
+      position: relative;
+      animation: messageGlitch 4s infinite;
+    }
+    @keyframes messageGlitch {
+      0%, 100% { transform: translateX(0); opacity: 1; text-shadow: none; }
+      5% { transform: translateX(3px); opacity: 0.9; text-shadow: -1px 0 red; }
+      6% { transform: translateX(-3px); text-shadow: 1px 0 blue; }
+      7% { transform: translateX(0); text-shadow: none; }
+      45% { transform: skew(0deg, 0deg); }
+      50% { transform: skew(2deg, 1deg); text-shadow: -2px 0 cyan, 2px 0 magenta; }
+      52% { transform: skew(-2deg, -1deg); text-shadow: 2px 0 cyan, -2px 0 magenta; }
+      54% { transform: skew(0deg, 0deg); text-shadow: none; }
+    }
+
+    /* signature container with rotating phrases and animated circles */
+    .signature-container {
+      margin-top: 2rem;
+      padding-top: 1.2rem;
+      border-top: 2px solid rgba(210,220,240,0.6);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .circles-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .circle {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,215,150,0.5), rgba(200,180,250,0.3));
+      filter: blur(8px);
+      animation: floatCircle 8s infinite alternate ease-in-out;
+      border: none;
+    }
+    .circle:nth-child(1) { top: -20px; left: 5%; width: 120px; height: 120px; background: radial-gradient(circle at 20% 20%, #ffd0b0, #c0b0ff); animation-duration: 12s; }
+    .circle:nth-child(2) { bottom: -10px; right: 10%; width: 150px; height: 150px; background: radial-gradient(circle at 70% 30%, #b0e0ff, #f0b0ff); animation-duration: 10s; animation-delay: -2s; }
+    .circle:nth-child(3) { top: 30%; right: 0; width: 100px; height: 100px; background: radial-gradient(circle at 40% 60%, #ffb5c0, #b0ffd0); animation-duration: 14s; animation-delay: -5s; }
+    .circle:nth-child(4) { bottom: 20%; left: 0; width: 180px; height: 180px; background: radial-gradient(circle at 60% 20%, #d0b0ff, #b0ffea); animation-duration: 16s; animation-delay: -3s; }
+    @keyframes floatCircle {
+      0% { transform: translate(0, 0) scale(1); opacity: 0.4; }
+      100% { transform: translate(30px, -20px) scale(1.2); opacity: 0.7; }
+    }
+
+    .rotating-signature {
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: #2e4057;
+      letter-spacing: 0.02em;
+      text-shadow: 2px 2px 3px rgba(255,255,255,0.7), -1px -1px 2px rgba(0,0,0,0.05);
+      background: rgba(230,236,245,0.5);
+      padding: 0.3rem 1.5rem;
+      border-radius: 60px;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.3);
+      z-index: 2;
+      transition: all 0.3s;
+      animation: signatureGlitch 5s infinite;
+    }
+    @keyframes signatureGlitch {
+      0%, 100% { transform: translateX(0); }
+      10% { transform: translateX(2px); text-shadow: -2px 0 #ffb0b0; }
+      12% { transform: translateX(-2px); text-shadow: 2px 0 #b0b0ff; }
+      14% { transform: translateX(0); text-shadow: 2px 2px 3px white; }
+    }
+
+    /* three dots above card */
+    .dots-container {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 18px;
+      z-index: 20;
+    }
+    .dot {
+      width: 16px;
+      height: 16px;
+      background: #e6ecf5;
+      border-radius: 30px;
+      box-shadow: -4px -4px 8px rgba(255,255,255,0.8), 4px 4px 8px rgba(163,177,198,0.5), inset -1px -1px 2px rgba(0,0,0,0.02);
+      border: 1px solid rgba(255,255,255,0.5);
+      animation: dotTyping 1.8s infinite ease-in-out both;
+    }
+    .dot:nth-child(1) { animation-delay: 0s; }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes dotTyping {
+      0%, 60%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
+      20% { transform: translateY(-15px) scale(1.2); opacity: 1; background: #ffffff; box-shadow: -6px -6px 12px white, 6px 6px 12px #b0c0d0; }
+      40% { transform: translateY(5px) scale(0.9); opacity: 0.8; }
+    }
+
+    /* media */
+    @media (max-width: 480px) {
+      .card { padding: 2.5rem 1.5rem; border-radius: 40px; }
+      .message { padding: 0.4rem 1rem 0.6rem; }
+      .rotating-signature { font-size: 1rem; }
+      .dots-container { top: 10px; gap: 10px; }
+      .dot { width: 12px; height: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="dots-container">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <main class="card">
+    <div class="glitch-word">error</div>
+    <h1 class="error-code">404</h1>
+    <div id="rotatingMessage" class="message">lo sentimos, ya no está disponible</div>
+
+    <div class="signature-container">
+      <div class="circles-bg">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <span id="rotatingSignature" class="rotating-signature">BY JESUSLEOVELFHDZ</span>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      // 10 frases para el mensaje principal (similares a "no disponible")
+      const messagePhrases = [
+        "lo sentimos, ya no está disponible",
+        "esta página no existe",
+        "contenido no encontrado",
+        "la página se fue de viaje",
+        "error 404 · extraviado",
+        "no disponible por ahora",
+        "este enlace está roto",
+        "no encontramos nada aquí",
+        "la página desapareció",
+        "recurso no disponible"
+      ];
+
+      // 10 frases para la firma (incluyendo la original y variaciones con Jesús Leovel)
+      const signaturePhrases = [
+        "BY JESUSLEOVELFHDZ",
+        "echo por Jesús leovel",
+        "Página de jesus leovel",
+        "JESUS LEOVEL · dev",
+        "by jesusleovel",
+        "Jesús Leovel HDZ",
+        "creado por JESUS L F H D Z",
+        "JESUSLEOVEL 2026",
+        "gracias jesus leovel",
+        "✨ jesusleovel ✨"
+      ];
+
+      const messageEl = document.getElementById('rotatingMessage');
+      const signatureEl = document.getElementById('rotatingSignature');
+      let messageIndex = 0;
+      let signatureIndex = 0;
+
+      function changeMessage() {
+        messageIndex = (messageIndex + 1) % messagePhrases.length;
+        // aplicamos un pequeño efecto glitch antes de cambiar
+        messageEl.style.transform = 'scale(1.02) skew(2deg, 1deg)';
+        messageEl.style.textShadow = '-2px 0 red, 2px 0 blue';
+        setTimeout(() => {
+          messageEl.textContent = messagePhrases[messageIndex];
+          messageEl.style.transform = '';
+          messageEl.style.textShadow = '';
+        }, 80);
+      }
+
+      function changeSignature() {
+        signatureIndex = (signatureIndex + 1) % signaturePhrases.length;
+        signatureEl.style.transform = 'translateX(4px) skew(-2deg)';
+        signatureEl.style.textShadow = '2px 0 magenta, -2px 0 cyan';
+        setTimeout(() => {
+          signatureEl.textContent = signaturePhrases[signatureIndex];
+          signatureEl.style.transform = '';
+          signatureEl.style.textShadow = '';
+        }, 90);
+      }
+
+      // Cambiar cada 2.5 segundos (mensaje) y cada 3 segundos (firma)
+      setInterval(changeMessage, 2500);
+      setInterval(changeSignature, 3000);
+
+      // También un efecto typewriter simulado al inicio (opcional, pero ya tenemos glitch)
+      // Para dar sensación de typewriter en el primer mensaje, lo mostramos letra a letra rápido
+      // pero como ya hay rotación, lo dejamos así.
+      // Pequeño detalle: al cargar, simular typewriter en el primer mensaje.
+      window.addEventListener('load', function() {
+        const originalText = messageEl.textContent;
+        messageEl.textContent = '';
+        let i = 0;
+        const typeInterval = setInterval(() => {
+          if (i < originalText.length) {
+            messageEl.textContent += originalText.charAt(i);
+            i++;
+          } else {
+            clearInterval(typeInterval);
+          }
+        }, 40);
+      });
+    })();
+  </script>
+</body>
+</html>
